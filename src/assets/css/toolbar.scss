@@ -1,0 +1,80 @@
+.toolbar {
+  height: 50px;
+  box-shadow: none !important;
+  background: $text-color-main !important;
+  z-index: 8;
+  
+  .v-toolbar__content {
+    height: 50px !important;
+  }
+
+  .toolbar-title {
+    color: $white-background;
+    font-family: $font-style-semi-bold;
+    font-size: $font-size-16;
+  }
+
+  .toolbar-control-group {
+    position: absolute;
+    right: 27px;
+
+    .toolbar-control {
+      width: 24px;
+      height: 24px;
+    }
+
+    .toolbar-control-button {
+      width: 24px;
+      height: 24px;
+      background: none;
+      border-radius: 100%;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+      .toolbar-avatar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background: $text-color-3;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 100%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: calc(100% + 3px);
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid $white-background;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+      }
+    }
+
+  }
+}
+
+.toolbar-control-list {
+  box-shadow: 0px 10px 40px rgba(79, 104, 131, 0.2) !important;
+  border-radius: 4px !important;
+  .toolbar-list {
+      padding: 8px 0px !important;
+      .toolbar-list-item {
+          height: 31px;
+          .v-list__tile {
+              height: 31px;
+          }
+      }
+  }
+  .toolbar-list-title {
+      font-family: $font-style-medium;
+      font-size: $font-size-12;
+      color: $text-color-2;
+  }
+}

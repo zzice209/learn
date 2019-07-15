@@ -1,0 +1,98 @@
+.cbt-fb{
+  visibility: hidden;
+}
+
+.cbt-facebook-login {
+  padding: 0;
+  width: auto !important;
+  float: right;
+  margin-left: 1em;
+  button {
+    border-radius: 4px;
+    margin: 0;
+    width: auto;
+    height: 25px;
+    line-height: 25px !important;
+    padding: 0px !important;
+    font-family: $font-style-regular !important;
+    font-size: $font-size-12 !important;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    &.v-btn.v-btn--disabled:not(.v-btn--icon):not(.v-btn--flat) {
+      opacity: 0.6;
+      color: $accent-white !important;
+      background-color: $accent-main !important;
+    }
+
+    min-height: auto !important;
+    min-width: 78px !important;
+    color: $accent-white;
+    background: $accent-main !important;
+
+    .spinner {
+      display: none;
+    }
+
+    img {
+      // position: unset;
+      display: none;
+      width: 15px;
+      float: left;
+      margin: 8px;
+      width: 15px;
+    }
+  }
+}
+
+.facebook-login {
+  display: none
+}
+
+.div-btn{
+  text-align:center;
+}
+
+.circle-icon-fb{
+  margin-top: 64px;
+  width: 32px;
+  height: 32px;
+  
+  background: #3A589E;
+  border-radius: 100%;
+}
+
+.square-icon-fb{
+width: 14.93px;
+height: 16px;
+
+font-family: Font Awesome 5 Brands;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 13px;
+text-align: center;
+letter-spacing: 0.02em;
+
+color: #FFFFFF;
+}
+
+.fb-text{
+  margin-top: 16px;
+  font-family: $font-style-medium;
+  font-size: $font-size-12;
+  text-align: center;
+
+color: #00254D;
+}
+
+.fb-text-2{
+  width: 256px;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 91px;
+  font-family: $font-style-regular;
+font-size: $font-size-12;
+
+text-align: center;
+
+color: #859FBA;
+}

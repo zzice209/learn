@@ -1,0 +1,24 @@
+// Custom progress bar audience
+.v-progress-linear__bar__determinate {
+  border-radius: 4px;
+}
+.v-progress-linear {
+  border-radius: 4px;
+}
+.v-stepper__content {
+  .cbt-hidden-text {
+    font-size: $font-size-10;
+  }
+
+}
+.v-stepper__label {
+
+  .cbt-dialog-title {
+    font-size: $font-size-12;
+  }
+
+}
+
+.v-stepper__label .cbt-dialog-title {
+  color: #859FBA
+}

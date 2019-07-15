@@ -1,0 +1,243 @@
+.cbt-table-container {
+  overflow: auto;
+}
+
+.cbt-table {
+  min-width: 1000px;
+
+  .cbt-table-no-data {
+    width: 100%;
+  }
+
+  .cbt-table-avatar-group {
+    .cbt-table-avatar {
+      position: absolute;
+      top: calc((100% - 24px)/2);
+    }
+
+    .cbt-table-avatar-text {
+      padding-left: 33px;
+    }
+  }
+
+  .v-datatable__progress {
+    display: none !important;
+  }
+
+  tr {
+    border: none !important;
+
+    &:hover {
+      background: $hover-background !important;
+    }
+  }
+
+  tr:not(.v-datatable__expand-row) {
+    display: inline-flex;
+    width: 100%;
+    th,
+    td {
+      display: block;
+      float: left;
+
+      span:not(.content-group) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.cbt-table-null-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  .cbt-table-null-text {
+    font-family: $font-style-regular;
+    font-size: $font-size-12;
+    color: $text-color-3;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .cbt-table-null-btn {
+    margin-top: 32px;
+
+    .cbt-btn {
+      padding: 10px 16px 9px 16px !important;
+      height: auto;
+    }
+  }
+}
+
+.cbt-table-header {
+  height: 41px !important;
+  text-transform: uppercase;
+
+  &.simple-table th:first-child {
+    padding-left: 0px !important;
+  }
+
+  th {
+    height: 41px !important;
+    line-height: 41px;
+    font-family: $font-style-semi-bold;
+    color: $text-color-3 !important;
+    font-size: $font-size-10 !important;
+    border-bottom: 1px solid $text-color-4;
+
+    &:last-child {
+      padding-right: 0px !important;
+    }
+  }
+}
+.ad-account-text {
+  td {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.cbt-table-row {
+  position: relative;
+
+  .cbt-table-btn-group {
+    overflow: auto;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  &:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+
+  .highlight {
+    font-family: $font-style-semi-bold;
+  }
+
+  &[active] {
+    background: #F4FDF7 !important;
+  }
+
+  &.simple-table td:first-child {
+    padding-left: 0px !important;
+  }
+
+  td {
+    position: relative;
+    font-family: $font-style-regular;
+    color: $text-color-main !important;
+    font-size: $font-size-12 !important;
+    padding-top: 12px !important;
+    padding-bottom: 11px !important;
+    border-bottom: 1px solid $text-color-4;
+    line-height: 2;
+
+    &:last-child {
+      padding-right: 0px !important;
+    }
+
+    span {
+      display: block;
+      position: relative;
+      white-space: nowrap;
+    }
+  }
+}
+
+.expanded-row {
+  position: relative;
+
+  td:first-of-type {
+    span {
+      overflow: visible;
+    }
+  }
+
+  td:first-of-type span::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: calc(50% - 2px);
+    width: 0;
+    height: 0;
+    border-top: 4px solid $text-color-3;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+}
+
+.expand-row {
+  td:first-of-type {
+    span {
+      overflow: visible;
+    }
+  }
+
+  td:first-of-type span::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: calc(50% - 4px);
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid $text-color-3;
+  }
+}
+
+.cbt-pagination {
+  padding: 16px;
+
+  .cbt-pagination-text {
+    font-family: $font-style-regular;
+    font-size: $font-size-10;
+    color: $text-color-2;
+    line-height: 25px;
+  }
+
+  .cbt-size-select-group {
+    margin-right: 42px;
+
+    .cbt-pagination-size-select {
+      .cbt-select-btn {
+        background: $white-background !important;
+        min-width: 60px;
+      }
+    }
+  }
+
+  .cbt-navigation-group {
+    .cbt-pagination-input {
+      width: 50px;
+      margin: 0 4px;
+
+      .v-input__slot {
+        padding-right: 4px !important;
+        background: $white-background !important;
+      }
+    }
+
+    .cbt-navigation-button-group {
+      margin-left: 24px;
+
+      .cbt-navigation-button {
+        padding: 0px 4px !important;
+        border: 1px solid #DDE6ED !important;
+
+        &:disabled {
+          background: none !important;
+        }
+      }
+    }
+  }
+}

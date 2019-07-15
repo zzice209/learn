@@ -1,0 +1,29 @@
+.analytic-progress {
+
+  .cbt-confirm-dialog-content {
+    padding-bottom: 0px;
+
+    .success-content {
+      .success-logo {
+        .icon-bar-chart-2 {
+          color: $text-color-3;
+        }
+      }
+    }
+  }
+}
+
+.analytic-container {
+
+  .v-tabs__bar {
+    background: #EDF3F8;
+
+    .v-tabs__container {
+      justify-content: center;
+      .v-tabs__slider-wrapper {
+        display: none;
+      }
+    }
+
+  }
+}

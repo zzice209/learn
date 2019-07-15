@@ -1,0 +1,225 @@
+.cbt-select-btn {
+  margin: 7px 4px 8px !important;
+  background: none !important;
+  border: 1px solid #DDE6ED !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  position: relative;
+  padding: 0 16px 0 8px !important;
+  height: 25px !important;
+
+  &.active {
+    background-color: $main-background !important;
+
+    .cbt-select-label {
+      color: $accent-main;
+    }
+
+    .cbt-select-value {
+      color: $accent-main;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: calc(50% - 1.5px);
+    right: 8px;
+    border-top: 3px solid $accent-main;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+  }
+
+  .cbt-select-label {
+    padding-right: 4px;
+    font-family: $font-style-semi-bold;
+    font-size: $font-size-12;
+    color: $text-color-2;
+    text-align: left;
+    text-transform: none;
+  }
+
+  .cbt-select-value {
+    padding-right: 4px;
+    font-family: $font-style-regular;
+    font-size: $font-size-12;
+    color: $text-color-2;
+    text-align: right;
+    text-transform: none;
+  }
+}
+
+.cbt-select {
+  background: $white-background;
+}
+
+.cbt-select-search {
+  margin: 8px 8px 16px;
+}
+
+.cbt-select-container {
+  width: 303px;
+  background: $white-background;
+
+  .cbt-select-top-content {
+    margin: 12px 16px 12px;
+
+    .cbt-select-title {
+      color: $accent-main;
+      font-family: $font-style-semi-bold;
+      font-size: $font-size-10;
+      text-transform: uppercase;
+    }
+
+    .cbt-select-detail {
+      color: $text-color-main;
+      font-family: $font-style-regular;
+      font-size: $font-size-12;
+    }
+  }
+
+  .cbt-select-list-content {
+    max-height: 216px;
+    height: 216px;
+    overflow-y: auto;
+    padding: 8px 0;
+
+    .cbt-select-list-item {
+      padding: 0px 16px;
+      margin: 0px;
+      min-height: 31px;
+
+      .cbt-select-list-item-container {
+        display: inline-flex;
+      }
+
+      .v-icon {
+        font-size: 15px;
+      }
+
+      .v-input--selection-controls__ripple {
+        height: 30px;
+        width: 30px;
+        left: -7.5px;
+        top: calc(50% - 15px);
+      }
+
+      .v-label {
+        font-family: $font-style-medium;
+        font-size: $font-size-12;
+        color: $text-color-2;
+        line-height: 1.5;
+        // white-space: nowrap;
+      }
+    }
+  }
+
+  .cbt-select-footer {
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;
+    border: 1px solid #DDE6ED;
+
+    .cbt-button-group {
+      margin: 11px auto 0px;
+      float: right;
+
+      .cbt-btn {
+        height: 21px;
+        max-width: 75px;
+        font-size: $font-size-10;
+      }
+    }
+  }
+}
+
+.cbt-big-select {
+  .cbt-select-btn {
+    margin-left: 0px !important;
+    height: 31px !important;
+  }
+
+  .cbt-select-container {
+    width: auto;
+    max-width: 814px;
+  }
+
+  .cbt-big-selected-data {
+    overflow-y: auto;
+    max-height: 80px;
+  }
+}
+
+.cbt-expansion-container {
+  .cbt-expansion-option {
+    padding: 0px !important;
+    position: relative;
+    height: 31px;
+    border-bottom: $line;
+
+    .cbt-expansion-container {
+      box-shadow: none !important;
+    }
+
+    .cbt-expansion-option-header {
+      height: 31px;
+      line-height: 31px;
+    }
+
+    .cbt-expansion-option-child {
+      .cbt-expansion-label {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: -16px;
+          top: calc(50% - 4px);
+          width: 0;
+          height: 0;
+          border-top: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-left: 4px solid $text-color-3;
+        }
+      }
+    }
+
+    .cbt-expansion-header-parent {
+      .cbt-expansion-label {
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0px;
+          top: calc(50% - 4px);
+          width: 0;
+          height: 0;
+          border-top: 4px solid transparent;
+          border-right: 4px solid $text-color-3;
+          border-bottom: 4px solid transparent;
+          border-left: 4px solid transparent;
+        }
+      }
+    }
+
+    .cbt-expansion-label {
+      padding-left: 16px;
+      font-size: $font-size-12;
+      font-family: $font-style-medium;
+      color: $text-color-2;
+    }
+
+    .cbt-expansion-checkbox {
+      position: absolute;
+      right: 0;
+      top: 4px;
+      padding-top: 4px;
+      margin: 0px;
+      float: right;
+    }
+  }
+}

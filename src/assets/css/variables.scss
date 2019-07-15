@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('../font/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Semi Bold';
+  src: url('../font/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('../font/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('../font/Montserrat-Medium.ttf') format('truetype');
+}
+
+$font-style-regular: 'Montserrat Regular',
+sans-serif;
+$font-style-medium: 'Montserrat Medium',
+sans-serif;
+$font-style-semi-bold: 'Montserrat Semi Bold',
+sans-serif;
+$font-style-bold: 'Montserrat Bold',
+sans-serif;
+$font-size-10: 10px;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-24: 24px;
+$text-color-main: #00254d;
+$text-color-2: #2c4b6c;
+$text-color-3: #8ea5bd;
+$text-color-4: #aac1da;
+$accent-main: #3DAA62;
+$accent-2: #42B6F6;
+$accent-3: #3D62AA;
+$accent-4: #4BCACA;
+$accent-white: #ffffff;
+$accent-warning:#EB5757;
+$accent-alert: #F58624;
+$line: 1px solid #e4ecf2;
+$main-background: rgba(61, 170, 98, .1);
+$light-background: #edf3f8;
+$white-background: #ffffff;
+$black-background: #000000;
+$box-shadow: 0px 10px 40px rgba(79, 104, 131, .1);
+$hover-background: #F8FAFC;
+$text-line: 25px;
+
+.color-warning {
+  color: $accent-warning !important;
+}
+
+.color-success {
+  color: $accent-main !important;
+}
+
+.tabs-color-success {
+  background-color: $accent-main !important;
+  border-color: $accent-main !important;
+}
+
+.color-alert {
+  color: $accent-alert !important;
+}
+
+.text-color-main {
+  color: $text-color-main !important;
+}
+
+.text-color-2 {
+  color: $text-color-2 !important;
+}
+
+.text-color-3 {
+  color: $text-color-3 !important;
+}
+
+.text-color-4 {
+  color: $text-color-4 !important;
+}
+
+*::hover {
+  background: $hover-background;
+}
+
+.color-main {
+  color: $accent-main !important;
+}
+
+.color-2 {
+  color: $accent-2;
+}
+
+.color-3 {
+  color: $accent-3;
+}
+
+.color-4 {
+  color: $accent-4;
+}
+
+.color-error {
+  color: $accent-warning
+}
+
+.accent-main {
+  background-color: $accent-main !important;
+  border-color: $accent-main !important;
+}
+
+.accent-2 {
+  background-color: $accent-2 !important;
+  border-color: $accent-2 !important;
+}
+
+.accent-3 {
+  background-color: $accent-3 !important;
+  border-color: $accent-3 !important;
+}
+
+.accent-4 {
+  background-color: $accent-4 !important;
+  border-color: $accent-4 !important;
+}
+
+.accent-warning {
+  background-color: $accent-warning !important;
+  border-color: $accent-warning !important;
+}
+
+.font-size-10 {
+  font-size: $font-size-10 !important;
+}
+
+.font-size-12 {
+  font-size: $font-size-12 !important;
+}
+
+.font-size-14 {
+  font-size: $font-size-14 !important;
+}
+
+.font-size-16 {
+  font-size: $font-size-16 !important;
+}
+
+.font-size-18 {
+  font-size: $font-size-18 !important;
+}
+
+.font-size-24 {
+  font-size: $font-size-24 !important;
+}
+
+.opacity-main-background {
+  background: rgba(61, 170, 98, .1);
+}
+
+.opacity-2-background {
+  background: rgba(66, 182, 246, .1);
+}
+
+.opacity-3-background {
+  background: rgba(61, 98, 170, .1);
+}
+
+.opacity-4-background {
+  background: rgba(75, 202, 202, .1);
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-bold {
+  font-family: $font-style-bold !important;
+}
+
+.font-semi {
+  font-family: $font-style-semi-bold !important;
+}
+
+.font-regular {
+  font-family: $font-style-regular !important;
+}
+
+.font-medium {
+  font-family: $font-style-medium !important;
+}
+
+.spacer {
+  position: relative;
+}
+
+.full-height {
+  height: 100% !important;
+}
+
+.full-width {
+  width: 100% !important;
+  min-width: auto !important;
+  max-width: 100% !important;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $light-background;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $accent-main;
+}
+
+.text-line {
+  line-height: $text-line;
+}
+
+.click-able {
+  cursor: pointer;
+}

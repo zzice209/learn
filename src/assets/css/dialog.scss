@@ -1,0 +1,195 @@
+.cbt-dialog-container {
+  background: $white-background;
+  .cbt-checkbox {
+    white-space: nowrap;
+    width: auto;
+    min-width: 24px;
+  }
+  .cbt-dialog-content {
+    .cbt-btn {
+      color: $white-background;
+      font-family: $font-style-regular;
+      box-shadow: none;
+      margin-right: 8px;
+    }
+    .btn-1 {
+      border: 1px solid #DDE6ED;
+      border-radius: 4px;
+      color: $text-color-2;
+    }
+
+    .cbt-diaglog-step {
+      padding: 32px 24px 32px 29px;
+
+      .csv-logo {
+        padding-right: 16px;
+      }
+    }
+    .cbt-download-content {
+      .cbt-dialog-title {
+        font-family: $font-style-semi-bold;
+        font-size: $font-size-12;
+        color: $text-color-main;
+      }
+      .cbt-dialog-title-1 {
+        font-family: $font-style-semi-bold;
+        font-size: $font-size-10;
+        color: $text-color-main;
+        margin-top: 16px;
+      }
+      .cbt-dialog-title-2 {
+        font-family: $font-style-regular;
+        font-size: $font-size-10;
+        color: $text-color-main;
+        margin-top: 10px;
+
+        .icon-check3 {
+          color: $accent-main;
+          margin-left: 3px;
+        }
+      }
+      .cbt-hidden-text {
+        color: $text-color-3;
+        font-size: $font-size-10;
+        font-family: $font-style-regular;
+
+        .icon-x {
+          color: $accent-warning;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  .cbt-dialog-header {
+    position: relative;
+    padding: 16px 24px;
+
+    .cbt-dialog-title {
+      font-family: $font-style-semi-bold;
+      font-size: $font-size-16;
+      color: $text-color-main;
+    }
+
+    .cbt-dialog-cancel {
+      position: absolute;
+      right: 24px;
+      top: 20px;
+      font-size: $font-size-16;
+      color: $text-color-3;
+    }
+    &_adv {
+      box-shadow: 0px 1px 0px rgba(177, 182, 193, 0.2);
+    }
+
+  }
+
+
+  .cbt-confirm-dialog-content {
+    padding: 0 24px;
+    font-family: $font-style-regular;
+    font-size: $font-size-12;
+    color: $text-color-2;
+    padding-bottom: 60px;
+  }
+
+  .cbt-dialog-content {
+    padding-bottom: 25px;
+
+    .cbt-dialog-title {
+
+    }
+
+    .cbt-dialog-column {
+      overflow: auto;
+    }
+
+    .v-tabs__container {
+      border-bottom: $line;
+
+      .v-tabs__item {
+        padding: 24px;
+      }
+    }
+
+    .cbt-dialog-tab {
+      font-family: $font-style-medium;
+      font-size: $font-size-12;
+      color: $text-color-main;
+      text-transform: none !important;
+      padding: 0px;
+    }
+
+    .cbt-dialog-select {
+      height: auto !important;
+      min-width: 200px;
+
+      .cbt-dialog-select-button {
+        width: 100%;
+        margin: 7px 0px 8px !important;
+        background: none !important;
+        border: 1px solid #DDE6ED !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        position: relative;
+        padding: 0 4px 0 4px !important;
+        height: 29px !important;
+
+        .cbt-dialog-select-label {
+          width: 100%;
+          text-align: left;
+          padding: 0 4px;
+          font-family: $font-style-semi-bold;
+          font-size: $font-size-12;
+          color: $text-color-2;
+          text-transform: none;
+        }
+      }
+
+    }
+
+    .cbt-dialog-input-group {
+      position: relative;
+      height: 48px;
+    }
+  }
+
+  .cbt-dialog-row {
+    min-height: 48px;
+    height: auto;
+  }
+
+  .cbt-dialog-footer {
+    display: block;
+    // padding: 10px 24px;
+    position: absolute;
+    right: 24px;
+    bottom: 8px;
+
+    .cbt-btn {
+      min-width: 78px;
+    }
+  }
+}
+
+.cbt-table {
+  min-width: unset;
+}
+
+.cbt-dialog-table {
+  .cbt-dialog-table-row {
+    border-top: $line;
+    padding: 8px 0;
+
+    &:not(:first-of-type) {
+      border-bottom: $line;
+    }
+
+    .cbt-dialog-copy {
+      .cbt-btn {
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+      }
+    }
+  }
+}

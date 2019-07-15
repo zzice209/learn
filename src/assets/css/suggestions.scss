@@ -1,0 +1,59 @@
+.cbt-suggestions {
+  .cbt-suggestions-input-group {
+    margin: 8px 0;
+    position: relative;
+    .cbt-suggestions-input {
+      width: calc(100% - 85px);
+    }
+    .cbt-suggestions-button {
+      float: right;
+      margin: 5px;
+      padding: 0 4px !important;
+      height: 19px;
+      border-color: $accent-main !important;
+      color: $accent-main !important;
+      font-size: $font-size-10;
+    }
+    .cbt-select-container {
+      position: absolute;
+    }
+    .cbt-suggestions-select {
+      z-index: 2;
+      position: relative;
+      .cbt-select-container {
+        box-shadow: 0px 10px 40px rgba(79, 104, 131, 0.2) !important;
+        border-radius: 4px !important;
+        width: 100%;
+      }
+    }
+    .cbt-suggestions-list {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      box-shadow: 0px 10px 40px rgba(79, 104, 131, 0.2) !important;
+      border-radius: 4px !important;
+      overflow: auto;
+      max-height: 400px;
+      .cbt-suggestions-container {
+        .cbt-suggestions-item {
+          .v-list__tile {
+            height: 32px;
+            .v-tooltip {
+              width: 100%;
+            }
+          }
+          .cbt-suggestions-label {
+            padding-left: 24px;
+            font-family: $font-style-medium;
+            font-size: $font-size-12;
+            color: $text-color-2;
+          }
+          .cbt-suggestions-icon {
+            position: absolute;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

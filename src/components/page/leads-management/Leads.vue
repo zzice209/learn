@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="cbt-filter-container" v-if="list.length > 0">
+    <div class="cbt-filter-container">
       <v-layout class="cbt-filter-group" row wrap>
         <cbt-select v-for="(item, index) in filter" :key="index" :list='listFilter[item.type]' :type='item.type'
                     :title='item.title' :result='item.result' @updateFilter='updateFilter'></cbt-select>
         <v-spacer></v-spacer>
         <div class="cbt-export cbt-btn-group pull-right">
-          <v-btn v-if="permission.LEAD_DOWN === '1'" class="cbt-btn accent-main">
+          <v-btn class="cbt-btn accent-main">
             <v-icon class="cbt-icon icon-download3"></v-icon>
             {{$t('export.download')}}
           </v-btn>
@@ -139,9 +139,6 @@
         this.getListAdGroupFilter()
         this.getListAdIdFilter()
       } else {
-        this.$router.push({
-          name: '403'
-        })
       }
     },
     methods: {

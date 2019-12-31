@@ -231,7 +231,7 @@
 
         <v-tab :key="2" class="analytic-tab" style="text-transform: none">{{$t('audience.form.analytic')}}</v-tab>
         <v-tab-item class="analytic-content" :key="2" style="overflow: auto;height: 2000px;">
-          <div v-if="audience.analyticStatus === 0" class="cbt-table-null-group">
+          <div class="cbt-table-null-group">
             <div class="text-xs-center cbt-table-null-text">
               <span>{{$t('audience.form.analyticGuide')}}</span>
             </div>
@@ -249,7 +249,7 @@
             <!--</div>-->
           <!--</div>-->
 
-          <div v-if="audience.analyticStatus === 1" class="analytic-container" style="top: 30%; left: 50%; width: 50%">
+          <div class="analytic-container" style="top: 30%; left: 50%; width: 50%">
             <v-tabs>
 
               <v-tab :ripple="false" :key="3" style="text-transform: none">
@@ -277,7 +277,7 @@
       </v-tabs>
 
       <v-dialog v-model="selectDialog" persistent max-width="442px">
-        <audience-progress-analytic v-if="selectDialog" name="select" :audience="audience" @closeSelectDialog="closeSelectDialog" @selectAudienceDone="selectAudienceDone"></audience-progress-analytic>
+        <audience-progress-analytic name="select" :audience="audience" @closeSelectDialog="closeSelectDialog" @selectAudienceDone="selectAudienceDone"></audience-progress-analytic>
       </v-dialog>
 
     </div>

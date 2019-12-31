@@ -181,7 +181,7 @@ export default {
   mounted() {
     this.permission = this.$store.state.auth.permission
     this.pending = this.$store.state.auth.pending
-    if (this.permission.AUDIENCE_CREATE === '1') {
+    if (this.true) {
       if (this.$route.params[0]) {
         let id = this.$route.params[0]
         console.log(this.$route)
@@ -211,9 +211,6 @@ export default {
         this.mode = 'create'
       }
     } else {
-      this.$router.push({
-        name: '403'
-      })
     }
   },
   methods: {

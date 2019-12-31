@@ -22,10 +22,10 @@ import CBTLoading from '@/components/common/CBTLoading.vue'
 import CBTExpandOption from '@/components/common/CBTExpandOption.vue'
 import VueClipboard from 'vue-clipboard2'
 import './filters/filters'
-import {
-  FORGET_TOKEN
-}
-from '@/store/action.type'
+// import {
+//   FORGET_TOKEN
+// }
+// from '@/store/action.type'
 Vue.use(Vuelidate);
 Vue.use(Vuetify);
 Vue.use(VueClipboard)
@@ -69,46 +69,54 @@ router.beforeEach((to, from, next) => {
   if (to.path === '/logout') {
     next();
   } else {
-    if (to.path === '/' || to.path === '/login') {
-      if (store.getters.isAuthticated) {
-        ApiService.refreshToken().then(({
-          data
-        }) => {
-          document.title = old
-          store.dispatch('RESET_STORE')
-          let permission = store.state.auth.permission;
-          if (permission.DASHBOARD_VIEW === '1') {
-            router.push('/dashboard');
-          } else if (permission.AUDIENCE_VIEW === '1') {
-            router.push('/audience');
-          } else if (permission.TRACKING_VIEW === '1') {
-            router.push('/tracking');
-          } else if (permission.AD_ACCOUNT_VIEW === '1') {
-            this.$router.push('/adaccount');
-          } else if (permission.USER_MANAGEMENT === '1') {
-            router.push('/users');
-          } else {
-            router.push('/profile')
-          }
-        });
-      } else {
-        store.dispatch('RESET_STORE')
-        next()
-      }
-    } else {
-      store.dispatch('RESET_STORE')
-      if (store.getters.isAuthticated) {
-        ApiService.refreshToken().then(() => {
-          next();
-        });
-      } else {
-        const LENGTH_VALID = 31;
-        if (to.params[0].length === LENGTH_VALID) {
-          store.dispatch(FORGET_TOKEN, to.params)
-        }
-        router.push('/login');
-      }
-    }
+    // router.push('/dashboard');
+    // router.push('/audience');
+    // router.push('/tracking');
+    // this.$router.push('/adaccount');
+    // router.push('/users');
+    // router.push('/profile')
+
+    next();
+    // if (to.path === '/' || to.path === '/login') {
+    //   if (store.getters.isAuthticated) {
+    //     ApiService.refreshToken().then(({
+    //       data
+    //     }) => {
+    //       document.title = old
+    //       store.dispatch('RESET_STORE')
+    //       let permission = store.state.auth.permission;
+    //       if (permission.DASHBOARD_VIEW === '1') {
+    //         router.push('/dashboard');
+    //       } else if (permission.AUDIENCE_VIEW === '1') {
+    //         router.push('/audience');
+    //       } else if (permission.TRACKING_VIEW === '1') {
+    //         router.push('/tracking');
+    //       } else if (permission.AD_ACCOUNT_VIEW === '1') {
+    //         this.$router.push('/adaccount');
+    //       } else if (permission.USER_MANAGEMENT === '1') {
+    //         router.push('/users');
+    //       } else {
+    //         router.push('/profile')
+    //       }
+    //     });
+    //   } else {
+    //     store.dispatch('RESET_STORE')
+    //     next()
+    //   }
+    // } else {
+    //   store.dispatch('RESET_STORE')
+    //   if (store.getters.isAuthticated) {
+    //     ApiService.refreshToken().then(() => {
+    //       next();
+    //     });
+    //   } else {
+    //     const LENGTH_VALID = 31;
+    //     if (to.params[0].length === LENGTH_VALID) {
+    //       store.dispatch(FORGET_TOKEN, to.params)
+    //     }
+    //     router.push('/login');
+    //   }
+    // }
   }
 })
 Vue.component('loading', CBTLoading);

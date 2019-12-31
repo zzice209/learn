@@ -14,7 +14,7 @@
       </v-layout>
     </div>
     <div class="users">
-      <v-container class="users-container full-width" v-if="typing || search || list.length > 0">
+      <v-container class="users-container full-width" v-if="typing || search">
         <v-layout row class="mb-4">
           <v-tooltip :content-class="selected.length === 0?'cbt-tooltip bottom show':'cbt-tooltip bottom hide'" bottom>
             <v-menu :disabled="selected.length === 0 || actionList.length === 0" class="cbt-menu" offset-y slot="activator">
@@ -136,7 +136,7 @@
           </v-data-table>
         </div>
       </v-container>
-      <div class="cbt-pagination pull-right" v-if="(!loading &&  typing || search || list.length > 0) && list.length >0">
+      <div class="cbt-pagination pull-right" v-if="(!loading &&  typing || search) && list.length >0">
         <v-layout row wrap>
           <div class="cbt-size-select-group">
             <v-layout row wrap>
@@ -321,9 +321,6 @@ export default {
     if (this.permission.USER_MANAGEMENT === '1') {
       this.loadList()
     } else {
-      this.$router.push({
-        name: '403'
-      })
     }
   },
   computed: {

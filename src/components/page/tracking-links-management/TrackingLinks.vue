@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="cbt-filter-container" v-if="list.length > 0">
+    <div class="cbt-filter-container">
       <v-layout class="cbt-filter-group" row wrap>
         <cbt-select
           v-for="(item, index) in filter"
@@ -28,14 +28,14 @@
       </v-layout>
     </div>
     <div class="tracking-links">
-      <v-container class="tracking-links-container full-width" v-if="!loading && typing || search || list.length > 0">
+      <v-container class="tracking-links-container full-width" v-if="!loading && typing || search">
         <v-layout row class="mb-4">
           <div class="cbt-search">
             <v-text-field class="cbt-textfield" solo append-icon="icon-search3" @click:append="loadList" @keydown.enter="loadList" @change="loadList" v-model="search" :placeholder="$t('trackingLinks.search')"></v-text-field>
           </div>
           <div class="spacer"></div>
           <div class="cbt-btn-group pull-right">
-            <v-btn v-if="permission.TRACKING_CREATE === '1'" class="cbt-btn ml-2 accent-main" @click="addTrackingLinks">
+            <v-btn class="cbt-btn ml-2 accent-main" @click="addTrackingLinks">
               <v-icon class="cbt-icon icon-plus2"></v-icon>
               {{$t('trackingLinks.add')}}
             </v-btn>
@@ -68,17 +68,17 @@
         <div class="cbt-table-null-group">
           <div class="text-xs-center cbt-table-null-text">
             {{$t('trackingLinks.table.null')}}
-            <span v-if="permission.TRACKING_CREATE === '1'">{{$t('trackingLinks.table.null2')}}</span>
+            <span>{{$t('trackingLinks.table.null2')}}</span>
           </div>
           <div class="cbt-btn-group text-center cbt-table-null-btn">
-            <v-btn v-if="permission.TRACKING_CREATE === '1'" class="cbt-btn accent-main ml-0" @click="addTrackingLinks">
+            <v-btn class="cbt-btn accent-main ml-0" @click="addTrackingLinks">
               <v-icon class="cbt-icon icon-plus2"></v-icon>
               {{$t('trackingLinks.addSecond')}}
             </v-btn>
           </div>
         </div>
       </v-container>
-      <div class="cbt-pagination pull-right" v-if="list.length > 0">
+      <div class="cbt-pagination pull-right">
         <v-layout row wrap>
           <div class="cbt-size-select-group">
             <v-layout row wrap>
@@ -200,7 +200,6 @@ export default {
       this.getListAdGroupFilter()
       this.getListAdIdFilter()
     } else {
-      this.$router.push({ name: '403' })
     }
   },
   methods: {

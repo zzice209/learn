@@ -27,7 +27,7 @@
         </v-layout>
       </div>
       <template>
-        <v-container class="audience-container full-width" v-if="typing || search || list.length > 0">
+        <v-container class="audience-container full-width">
           <v-layout row class="mb-4">
             <v-tooltip :content-class="selected.length === 0?'cbt-tooltip bottom show':'cbt-tooltip bottom hide'" bottom>
               <v-menu :disabled="selected.length === 0" class="cbt-menu" offset-y slot="activator">
@@ -47,7 +47,7 @@
             </div>
             <div class="spacer"></div>
             <div class="cbt-btn-group pull-right">
-              <v-btn v-if="permission.AUDIENCE_CREATE === '1'" class="cbt-btn ml-2 accent-main" @click="selectTypeAudience">
+              <v-btn v-if="true" class="cbt-btn ml-2 accent-main" @click="selectTypeAudience">
                 <v-icon class="cbt-icon icon-plus2"></v-icon>
                 {{$t('audience.add')}}
               </v-btn>
@@ -159,7 +159,7 @@
             </v-data-table>
           </div>
         </v-container>
-        <div class="cbt-pagination pull-right" v-if="(!loading &&  typing || search || list.length > 0) && list.length >0">
+        <div class="cbt-pagination pull-right">
           <v-layout row wrap>
             <div class="cbt-size-select-group">
               <v-layout row wrap>
@@ -201,10 +201,10 @@
           <div class="cbt-table-null-group">
             <div class="text-xs-center cbt-table-null-text">
               {{$t('audience.table.null')}}
-              <span v-if="permission.AUDIENCE_CREATE === '1'">{{$t('audience.table.null2')}}</span>
+              <span v-if="true">{{$t('audience.table.null2')}}</span>
             </div>
             <div class="cbt-btn-group text-center cbt-table-null-btn">
-              <v-btn v-if="permission.AUDIENCE_CREATE === '1'" class="cbt-btn accent-main ml-0" @click="selectTypeAudience">
+              <v-btn v-if="true" class="cbt-btn accent-main ml-0" @click="selectTypeAudience">
                 <v-icon class="cbt-icon icon-plus2"></v-icon>
                 {{$t('audience.addSecond')}}
               </v-btn>
@@ -310,7 +310,7 @@
         properties: PROPERTIES.audience,
         avatar: false,
         size: [10, 20, 50, 100],
-        list: [],
+        list: [{}, {}],
         isSelectAll: false,
         listFilter: {
           creator: [],

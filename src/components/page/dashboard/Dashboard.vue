@@ -75,7 +75,7 @@
                     <v-tab :key="item.type" :ripple="false" v-if="item.byTime">{{$t('chart.byTime')}}</v-tab>
                     <v-spacer></v-spacer>
                     <div class="cbt-export cbt-btn-group pull-right">
-                      <v-btn v-if="permission.DASHBOARD_DOWN === '1'" class="cbt-btn accent-outline">
+                      <v-btn class="cbt-btn accent-outline">
                         <v-icon class="cbt-icon text-color-4 icon-download3"></v-icon>
                         <span class="font-semi">{{$t('export.download')}}</span>
                       </v-btn>
@@ -278,9 +278,6 @@ export default {
       this.getListAdGroupFilter()
       this.getListAdIdFilter()
     } else {
-      this.$router.push({
-        name: '403'
-      })
     }
     let windowWitdh = window.innerWidth
     let chartWidth = parseInt(document.getElementsByClassName('highcharts-container')[0].style.width)

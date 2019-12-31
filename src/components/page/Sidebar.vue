@@ -22,7 +22,7 @@
         </div>
       </div>
       <v-list class="sidebar-list">
-        <v-list-tile class="sidebar-menu" v-if="permission[item.permission] == '1'" :to="{name: permission[item.permission] == '1'?item.name:'403'}" exact v-for="(item, i) in items" :key="i">
+        <v-list-tile class="sidebar-menu" :to="{name: item.name}" exact v-for="(item, i) in items" :key="i">
           <!-- <v-list-tile class="sidebar-menu" :to="{name: item.name}" exact v-for="(item, i) in items" :key="i"> -->
           <v-list-tile-action class="sidebar-menu-item-icon">
             <v-icon v-html="item.icon"></v-icon>

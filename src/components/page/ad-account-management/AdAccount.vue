@@ -14,17 +14,17 @@
       </v-layout>
     </div>
     <div class="ad-account">
-      <div class="cbt-btn-group pull-right" v-if="(listpages.length > 0 || list.length > 0) && !pending">
+      <div class="cbt-btn-group pull-right" v-if="(listpages.length > 0) && !pending">
         <v-btn class="cbt-btn ml-2 accent-main" @click="addChannel">
           <v-icon class="cbt-icon icon-plus2"></v-icon>
           {{$t('adAccount.add')}}
         </v-btn>
       </div>
       <v-tabs color="white" dark slider-color="tabs-color-success" v-model="tabs">
-        <v-tab :key="0" ripple v-if="list.length > 0">
+        <v-tab :key="0" ripple>
           {{$t('adAccount.tab.account')}}
         </v-tab>
-        <v-tab-item :key="0" v-if="list.length > 0">
+        <v-tab-item :key="0">
           <v-alert v-model="alert" dismissible class="cbt-alert fixed-popup" icon="cbt-icon font-size-12 icon-check3">
             {{$t('users.dialog.refresh')}}
           </v-alert>
@@ -213,9 +213,6 @@ export default {
       this.loadList()
       this.loadListPages()
     } else {
-      this.$router.push({
-        name: '403'
-      })
     }
   },
   computed: {},

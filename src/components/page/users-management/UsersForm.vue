@@ -298,9 +298,6 @@ export default {
           })
       }
     } else {
-      this.$router.push({
-        name: '403'
-      })
     }
     userService
       .Profile()

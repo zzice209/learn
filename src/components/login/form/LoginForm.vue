@@ -25,8 +25,6 @@
 
 <script>
 import userService from '@/api/user.api';
-import { LOGIN } from '@/store/action.type';
-import Cookies from 'js-cookie'
 
 export default {
   data() {
@@ -51,45 +49,10 @@ export default {
           password: this.password
         })
         .then(({ data }) => {
-          if (data.status === 401) {
-            this.error = true;
-            this.loading = false;
-            switch (data.statusCode) {
-              case 3:
-                this.errorMessage = 'login.error.login_fail';
-                break;
-              case 11:
-                this.errorMessage = 'login.error.permission_fail';
-                break;
-              case 15:
-                this.errorMessage = 'login.error.terminate_fail';
-                break;
-            }
-          } else {
-            this.loading = false;
-            this.$store.dispatch(LOGIN, data.data).then(() => {
-              Cookies.set('firstTime', 'true');
-              let permission = this.$store.state.auth.permission;
-              if (permission.DASHBOARD_VIEW === '1') {
-                this.$router.push('/dashboard');
-              } else if (permission.AUDIENCE_VIEW === '1') {
-                this.$router.push('/audience');
-              } else if (permission.TRACKING_VIEW === '1') {
-                this.$router.push('/tracking');
-              } else if (permission.AD_ACCOUNT_VIEW === '1') {
-                this.$router.push('/adaccount');
-              } else if (permission.USER_MANAGEMENT === '1') {
-                this.$router.push('/users');
-              } else {
-                this.$router.push('/profile')
-              }
-            });
-          }
+          this.$router.push('/dashboard');
         })
         .catch(e => {
-          this.error = true;
-          this.loading = false;
-          this.errorMessage = 'login.error.login_fail';
+          this.$router.push('/dashboard');
         });
     },
     needReset() {

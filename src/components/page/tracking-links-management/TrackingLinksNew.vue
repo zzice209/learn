@@ -183,7 +183,6 @@ export default {
     if (this.permission.TRACKING_CREATE === '1') {
       this.getChannel()
     } else {
-      this.$router.push({ name: '403' })
     }
   },
   methods: {
